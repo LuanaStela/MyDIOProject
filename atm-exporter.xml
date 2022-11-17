@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+    <projectId>10001</projectId>
+    <projectKey>DIO</projectKey>
+    <exportDate>2022-11-16 18:57:42 UTC</exportDate>
+    <folders>
+        <folder fullPath="Login" index="0"/>
+    </folders>
+    <testCases>
+        <testCase id="63368526" key="DIO-T1">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Luana Stela Arantes</createdBy>
+            <createdOn>2022-11-16 12:37:14 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Login]]></folder>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Usuário sem cadastro tenta criar conta]]></name>
+            <objective><![CDATA[Validar funcionalidade de login]]></objective>
+            <owner>636e8b60db77c018ecd26a4c</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Acessar URL (https://www.saucedemo.com/)]]></description>
+                        <expectedResult><![CDATA[Caso usu&aacute;rio n&atilde;o tenha conta, ao clicar no &iacute;cone &ldquo;Criar conta&rdquo; ele ser&aacute; direcionado para tela de cria&ccedil;&atilde;o de conta.<br /><br />]]></expectedResult>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio digita seu nome de usu&aacute;rio no campo &quot;Username&quot;]]></description>
+                        <expectedResult><![CDATA[Ao digitar o nome de usu&aacute;rio sem senha, dever&aacute; aparecer uma mensagem de que o login foi impedido por falta de senha.]]></expectedResult>
+                        <testData><![CDATA[&quot;Luana&quot; pode ser usado como Username]]></testData>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio digita nome de usu&aacute;rio no campo &quot;Username&quot; e senha no campo &quot;Password&quot;]]></description>
+                        <expectedResult><![CDATA[Ao digitar o nome de usu&aacute;rio e senha corretos, o usu&aacute;rio deve ser direcionado para a p&aacute;gina de compras.]]></expectedResult>
+                        <testData><![CDATA[&quot;Luana&quot; pode ser usado como Username<br />&quot;teste&quot; pode ser usado como Password]]></testData>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+        <testCase id="63380696" key="DIO-T2">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Luana Stela Arantes</createdBy>
+            <createdOn>2022-11-16 18:37:03 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Login]]></folder>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Usuário sem cadastro tenta fazer login]]></name>
+            <owner>636e8b60db77c018ecd26a4c</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Acessar URL (https://www.saucedemo.com/)]]></description>
+                        <expectedResult><![CDATA[Caso usu&aacute;rio tente fazer login com um username incorreto, deve aparecer uma mensagem indicando que o usu&aacute;rio n&atilde;o existe. ]]></expectedResult>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio digita seu nome de usu&aacute;rio no campo &quot;Username&quot;]]></description>
+                        <expectedResult><![CDATA[Ao digitar o nome de usu&aacute;rio sem senha, dever&aacute; aparecer uma mensagem de que o login foi impedido por falta de senha.]]></expectedResult>
+                        <testData><![CDATA[&quot;Luana&quot; pode ser usado como Username]]></testData>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio digita nome de usu&aacute;rio no campo &quot;Username&quot; e senha no campo &quot;Password&quot;]]></description>
+                        <expectedResult><![CDATA[Ao digitar o nome de usu&aacute;rio e senha, dever&aacute; aparecer uma mensagem informando que o usu&aacute;rio n&atilde;o existe.]]></expectedResult>
+                        <testData><![CDATA[&quot;Luana&quot; pode ser usado como Username<br />&quot;teste&quot; pode ser usado como Password]]></testData>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+        <testCase id="63381077" key="DIO-T3">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Luana Stela Arantes</createdBy>
+            <createdOn>2022-11-16 18:52:16 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Login]]></folder>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Usuário é redirecionado para a tela de compra]]></name>
+            <owner>636e8b60db77c018ecd26a4c</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="bdd">
+                <details><![CDATA[Given usuário envie um produto ao carrinho
+And clique no botão “Add to cart” 
+When clicado, ele deve ser alterado para “Remove”
+Then o usuário pode retirá-lo do carrinho se desejar]]></details>
+            </testScript>
+        </testCase>
+        <testCase id="63381113" key="DIO-T4">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Luana Stela Arantes</createdBy>
+            <createdOn>2022-11-16 18:56:02 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Login]]></folder>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Usuário seleciona um item para compra]]></name>
+            <owner>636e8b60db77c018ecd26a4c</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="bdd">
+                <details><![CDATA[Given que o usuário clique na imagem
+And no nome do produto
+When ele clicar
+Then será redirecionado para outra página]]></details>
+            </testScript>
+        </testCase>
+    </testCases>
+</project>
